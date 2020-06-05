@@ -1,0 +1,26 @@
+<form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="page-section">
+        <view class="page-section-title">问题标题：</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd" style="margin: 30rpx 0">
+                    <input class="weui-input" name="question_title" placeholder="请输入标题" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">问题内容：</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd" style="margin: 30rpx 0">
+                    <input class="weui-input" name="question_context" placeholder="请输入问题" type="text" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btn-area">
+        <button style="margin:20rpx;float:left;width: 40%;" type="primary" formType="submit">Submit</button>
+        <button style="margin:20rpx;float:right;width: 40%;" formType="reset">reset</button>
+    </view>
+</form>

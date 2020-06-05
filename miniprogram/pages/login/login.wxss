@@ -1,0 +1,8 @@
+/* miniprogram/pages/reg/reg.wxss */
+.wx_login{
+    top: 20px;
+}
+
+.login_msg .weui-dialog{
+    width:200%;
+}

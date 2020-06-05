@@ -1,0 +1,37 @@
+<!-- miniprogram/pages/reg/reg.wxml -->
+<view>
+    <form catchsubmit="formSubmit" catchreset="formReset">
+        <view class="page-section">
+            <view class="page-section-title">用户名：</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd" style="margin: 30rpx 0">
+                        <input class="weui-input" name="username" placeholder="请输入账号" />
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="page-section">
+            <view class="page-section-title">密码：</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd" style="margin: 30rpx 0">
+                        <input class="weui-input" name="password" placeholder="请输入密码" password type="text" />
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="btn-area">
+            <button style="margin:20rpx;float:left;width: 40%;" type="primary" formType="submit">
+                登陆
+            </button>
+            <button style="margin:20rpx;float:right;width: 40%;" formType="reset">reset</button>
+        </view>
+    </form>
+    <mp-dialog class = "login_msg" title="登陆信息" show="{{is_show_dialog}}" bindbuttontap="{{login_state}}" buttons="{{buttons}}" >
+        <view >    {{res_msg}}    </view>
+    </mp-dialog>
+        <button class="wx_login" style="width:80%"open-type="getUserInfo" bindgetuserinfo="wx_getuserinfo" type="primary">
+            <view class="iconfont icon-weixin" style="font-size:20px"> 微信一键登陆</view>
+    </button>
+</view>
