@@ -20,8 +20,9 @@
 </view> -->
 
 <view class="container">
-  <view style="    display: flex;">
+  <!-- <view style="    display: flex;">
       <image mode="aspectFit" mode="center" style="width:50%" src="../../static/img/pet/m_imgt1.jpg"/>
       <image mode="aspectFit" mode="center" style="width:50%" src="../../static/img/pet/m_imgt2.jpg"/>
-  </view>
+  </view> -->
+  <view>这是首页</view>
 </view>

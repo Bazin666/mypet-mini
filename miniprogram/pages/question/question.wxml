@@ -27,9 +27,5 @@
             <button style="margin:20rpx;float:right;width: 40%;" formType="reset">reset</button>
         </view>
     </view>
-    <mp-cells title="带跳转的列表项">
-        <mp-cell link hover wx:for="{{question_l}}" wx:for-item="q" wx:for-index="i" wx:key="id" value="{{q.title}}" data-item="{{q}}" footer="问题{{i}}：" bindtap="select_q"></mp-cell>
-        <mp-cell link value="无hover效果" footer="说明文字"></mp-cell>
-        <mp-cell link url="../index" value="无hover效果，带跳转URL" footer="说明文字"></mp-cell>
-    </mp-cells>
+
 </form>

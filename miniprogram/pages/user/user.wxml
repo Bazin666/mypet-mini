@@ -19,8 +19,5 @@
     <view>
     <button bindtap="showQuestion">我的问题</button>
   </view>
-  <view>
-    user11111111111111111111111111
-  </view>
   <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
 </view>
