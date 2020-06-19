@@ -1,23 +1,7 @@
-// components/question_detail/question_detail.js
+"use strict";
 Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
-  },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
-  }
-})
+    properties: {},
+    data: {},
+    methods: {}
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicXVlc3Rpb25fZGV0YWlsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsicXVlc3Rpb25fZGV0YWlsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxTQUFTLENBQUM7SUFJTixVQUFVLEVBQUUsRUFFWDtJQUtELElBQUksRUFBRSxFQUVMO0lBS0QsT0FBTyxFQUFFLEVBRVI7Q0FDRixDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBjb21wb25lbnRzL3F1ZXN0aW9uX2RldGFpbC9xdWVzdGlvbl9kZXRhaWwudHNcclxuXHJcbkNvbXBvbmVudCh7XHJcbiAgICAvKipcclxuICAgICAqIOe7hOS7tueahOWxnuaAp+WIl+ihqFxyXG4gICAgICovXHJcbiAgICBwcm9wZXJ0aWVzOiB7XHJcbiAgXHJcbiAgICB9LFxyXG4gIFxyXG4gICAgLyoqXHJcbiAgICAgKiDnu4Tku7bnmoTliJ3lp4vmlbDmja5cclxuICAgICAqL1xyXG4gICAgZGF0YToge1xyXG4gIFxyXG4gICAgfSxcclxuICBcclxuICAgIC8qKlxyXG4gICAgICog57uE5Lu255qE5pa55rOV5YiX6KGoXHJcbiAgICAgKi9cclxuICAgIG1ldGhvZHM6IHtcclxuICBcclxuICAgIH1cclxuICB9KVxyXG4gICJdfQ==

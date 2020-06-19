@@ -26,7 +26,8 @@ Page({
       url: '../logs/logs',
     })
   },
-  tologin(){
+  toLogin(e:any){
+    console.log(e)
     wx.navigateTo({
       url:"../login/login"
     })

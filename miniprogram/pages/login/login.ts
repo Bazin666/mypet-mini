@@ -1,8 +1,37 @@
 import {login, wx_login_api} from '../../utils/api'
 Page({
-    onLoad(){
-
+    onLoad:function(options){
+        options
     },
+    onReady: function () {
+  
+    },
+
+    onShow: function () {
+  
+    },
+
+    onHide: function () {
+  
+    },
+
+    onUnload: function () {
+  
+    },
+
+    onPullDownRefresh: function () {
+  
+    },
+
+    onReachBottom: function () {
+  
+    },
+
+    onShareAppMessage: function () {
+
+        return {}
+    },
+
     data:{
         username:'',
         password:'',
@@ -14,6 +43,7 @@ Page({
         userInfo:undefined,
         hasUserInfo:false,
     },
+
     formSubmit(e: any){
         var _this = this;
         var info = e.detail.value
