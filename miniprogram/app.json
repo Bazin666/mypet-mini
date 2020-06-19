@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/community/community",
+    "pages/user/user",
+    "pages/question/showquestion"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,7 +14,23 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "useExtendedLib":{
-    "weui":true
+  "useExtendedLib": {
+    "weui": true
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户"
+      }
+    ]
   }
 }

@@ -1,0 +1,5 @@
+/* miniprogram/pages/question/showquestion.wxss */
+.weui-cells__title{
+    font-size: x-large;
+    
+}

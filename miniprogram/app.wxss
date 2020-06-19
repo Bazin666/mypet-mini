@@ -1,5 +1,5 @@
 /**app.wxss**/
-@import "./static/icons.wxss";
+@import "./static/wxss/icons.wxss";
 .container {
   height: 100%;
   display: flex;

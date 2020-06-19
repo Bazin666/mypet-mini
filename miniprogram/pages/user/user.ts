@@ -4,6 +4,18 @@
 import {getUserToken} from '../../utils/util'
 Page({
   data: {
+  //   list: [{
+  //     "text": "shouye",
+  //     "iconPath": "./../../static/img/shouye.png",
+  //     "selectedIconPath": "../../static/img/shouye.png",
+  //     dot: true
+  // },
+  // {
+  //   "text": "yonghuzhongxin",
+  //   "iconPath": "../../static/img/yonghu.png",
+  //   "selectedIconPath": "../../static/img/yonghu.png",
+  //     badge: 'New'
+  // }],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -67,12 +79,29 @@ Page({
       })
     }
   },
+  // getUserInfo(e: any) {
+  //   console.log(e)
+  //   app.globalData.userInfo = e.detail.userInfo
+  //   this.setData({
+  //     userInfo: e.detail.userInfo,
+  //     hasUserInfo: true,
+  //   })
+  // },
+
+  //
   toquestion(e:any){
     console.log(e)
     wx.navigateTo({
       url:'../question/question'
     })
   },
+  showQuestion(e:any){
+    console.log(e)
+    wx.navigateTo({
+      url:'../question/showquestion'
+    })
+  }
+  ,
   toreg(){
     wx.navigateTo({
       url:'../reg/reg'
@@ -82,7 +111,7 @@ Page({
     if (typeof this.getTabBar === 'function' &&
         this.getTabBar()) {
         this.getTabBar().setData({
-          selected: 0
+          selected: 1
         })
       }
   }

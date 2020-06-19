@@ -1,5 +1,4 @@
 import {login, wx_login_api} from '../../utils/api'
-
 Page({
     onLoad(){
 
@@ -12,6 +11,8 @@ Page({
         is_show_dialog:false,
         login_state:"",
         user_data:'',
+        userInfo:undefined,
+        hasUserInfo:false,
     },
     formSubmit(e: any){
         var _this = this;
@@ -42,8 +43,9 @@ Page({
 
     },
     success_login(){
-        wx.navigateTo({
-            url:"../index/index"
+        wx.navigateBack({
+            delta:1
+
         })
     },
     fail_login(){
@@ -62,14 +64,22 @@ Page({
     wx_getuserinfo(e:any){
         var _this  = this
         var userdetail= JSON.stringify(e.detail)
+        _this.setData({
+            userInfo: e.detail.userInfo,
+            hasUserInfo: true,
+          })
+        console.log(e.detail.userInfo)
+        wx.setStorageSync('userInfo',e.detail.userInfo)
         wx.login({
             success(res){
                 var info = {code:res.code,userinfo:userdetail}
                 wx_login_api(info,()=>{
+
                         _this.setData({res_msg:'登陆成功'})
                         _this.setData({login_state:'success_login'})
                         _this.showMsg()})
             }
         })
+        
     }
 })

@@ -1,10 +1,10 @@
-<form catchsubmit="formSubmit" catchreset="formReset">
+<form catchsubmit="formSubmit" catchreset="change">
     <view class="page-section">
         <view class="page-section-title">问题标题：</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd" style="margin: 30rpx 0">
-                    <input class="weui-input" name="question_title" placeholder="请输入标题" />
+                    <input class="weui-input" name="question_title" placeholder="请输入标题" value="{{q_title}}" />
                 </view>
             </view>
         </view>
@@ -14,13 +14,22 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__bd" style="margin: 30rpx 0">
-                    <input class="weui-input" name="question_context" placeholder="请输入问题" type="text" />
+                    <input class="weui-input" name="question_context" placeholder="请输入问题" type="text" value="{{q_context}}" />
                 </view>
             </view>
         </view>
     </view>
-    <view class="btn-area">
-        <button style="margin:20rpx;float:left;width: 40%;" type="primary" formType="submit">Submit</button>
-        <button style="margin:20rpx;float:right;width: 40%;" formType="reset">reset</button>
+    <view class="clear">
+        <view class="btn-area" style="paddin">
+            <button style="margin:20rpx;float:left;width: 40%;" type="primary" formType="submit">
+                Submit
+            </button>
+            <button style="margin:20rpx;float:right;width: 40%;" formType="reset">reset</button>
+        </view>
     </view>
+    <mp-cells title="带跳转的列表项">
+        <mp-cell link hover wx:for="{{question_l}}" wx:for-item="q" wx:for-index="i" wx:key="id" value="{{q.title}}" data-item="{{q}}" footer="问题{{i}}：" bindtap="select_q"></mp-cell>
+        <mp-cell link value="无hover效果" footer="说明文字"></mp-cell>
+        <mp-cell link url="../index" value="无hover效果，带跳转URL" footer="说明文字"></mp-cell>
+    </mp-cells>
 </form>

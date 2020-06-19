@@ -1,4 +1,4 @@
-<!-- 
+<!-- index.wxml -->
 <view class="container">
   <view class="userinfo">
     <view wx:if="{{!hasUserInfo && canIUse}}"></view>
@@ -11,17 +11,16 @@
     <button bindtap="tologin">登陆</button>
   </view>
   <view>
-    <button bindtap="toquestion">问题</button>
+    <button bindtap="toquestion">添加问题</button>
   </view>
     <view>
     <button bindtap="toreg">注册</button>
   </view>
-  <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
-</view> -->
-
-<view class="container">
-  <view style="    display: flex;">
-      <image mode="aspectFit" mode="center" style="width:50%" src="../../static/img/pet/m_imgt1.jpg"/>
-      <image mode="aspectFit" mode="center" style="width:50%" src="../../static/img/pet/m_imgt2.jpg"/>
+    <view>
+    <button bindtap="showQuestion">我的问题</button>
   </view>
+  <view>
+    user11111111111111111111111111
+  </view>
+  <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
 </view>
