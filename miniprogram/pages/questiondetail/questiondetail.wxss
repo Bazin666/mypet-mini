@@ -32,13 +32,12 @@
     text-align: right;
   }
   .weui-textarea {
-  
       cursor: auto;
       width: auto;
-      height: 500px;
       display: flex;
       overflow: hidden;
-      height: 15em
+      height: 15em,
+      
   }
   
   

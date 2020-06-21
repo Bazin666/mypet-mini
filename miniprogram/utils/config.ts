@@ -10,6 +10,7 @@ const question_list_url_all = pre_url+"questions/all"
 const question_one = pre_url + "question"
 const question_rev = pre_url + "question/rev"
 const question_delete = pre_url + "question/delete"
+const comment_add = pre_url+"comment/add"
 const header = {
     'content-type':'application/x-www-form-urlencoded',
     'Authorization':wx.getStorageSync('user_token') || 'test',
@@ -29,6 +30,7 @@ const config = {
     question_one,
     question_rev,
     question_delete,
+    comment_add
 }
 
 export default config

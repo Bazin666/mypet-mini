@@ -15,20 +15,23 @@
                 <view class="weui-cell__bd context">
                     <text class="">{{question_detail.context}}</text>
                     <!-- <textarea class="weui-textarea" placeholder="请输入文本" style="" maxlength="200" bindinput="changeText" value="{{question_detail.context}}" /> -->
-                    <view class="weui-textarea-counter">{{textarea_num}}</view>
                 </view>
             </view>
         </view>
-        <view class="clear">
-            <view class="btn-area" style="paddin">
-                <!-- <button style="margin:20rpx;float:left;width: 40%;" type="primary" bindtap="submit">修改</button>
+    </view>
+    <mp-dialog class="comment_msg" title="  评论  " show="{{comment_show}}" bindbuttontap="tapDialogButton" buttons="{{comment_button}}">
+        <textarea class="weui-textarea" placeholder="请输入文本" style="" maxlength="200" bindinput="changeText" />
+    </mp-dialog>
+    <view wx:if="{{question_detail.comments != null}}" style=" width: 100%;">
+        <text class="centainer" wx:for="{{question_detail.comments}}" wx:for-item="{{comment}}" wx:for-index="i">
+            评论{{i+1}}:{{question_detail.comments[i]}}
+        </text>
+    </view>
+    <view class="clear">
+        <view class="btn-area" style="paddin">
+            <!-- <button style="margin:20rpx;float:left;width: 40%;" type="primary" bindtap="submit">修改</button>
                 <button style="margin:20rpx;float:right;width: 40%;" bindtap="delete">删除</button> -->
-                <button style="" bindtap="addcomment " type="primary">  评论  </button>
-            </view>
+            <button style="" bindtap="addcomment" type="primary">评论</button>
         </view>
     </view>
-
-     <mp-dialog class="comment_msg" title="test" show="{{comment_show}}" bindbuttontap="tapDialogButton" buttons="{{comment_button}}">
-        <view >test content</view>
-    </mp-dialog>
 </view>

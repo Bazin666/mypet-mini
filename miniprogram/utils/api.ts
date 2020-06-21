@@ -148,3 +148,15 @@ export const question_delete = (data:{qid: number,title:string,context:string },
         },
     })
 }
+
+export const comment_add = (data:{qid:number,comment_context:string},success_function:Function)=>{
+    res({
+        url:conf.comment_add,
+        data:data,
+        method:"POST",
+        header:conf.header,
+        success:(res) => {
+            success_function(res)
+        }
+    })
+}

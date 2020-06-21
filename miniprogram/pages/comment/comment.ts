@@ -1,4 +1,4 @@
-import { question_one } from "../../utils/api";
+import { question_one, comment_add } from "../../utils/api";
 
 // miniprogram/pages/comment/commnet.js
 Page({
@@ -9,10 +9,12 @@ Page({
     question_detail:{
         qid:Number,
         title:String,
-        context:String
+        context:String,
+        comments:[]
     },
     comment_button:[{text: '确定评论'}, {text: '取消'}],
-    comment_show:false
+    comment_show:false,
+    comment_context:''
   },
 
   /**
@@ -27,13 +29,13 @@ Page({
         qid: qid,
       },
       (result: any) => {
+        console.log(result.data)
         _this.setData({
           question_detail: result.data,
         });
       }
     );
-
-    console.log(this.data.question_detail)
+    console.log(this.data.question_detail.comments)
   },
 
   addcomment(){
@@ -41,7 +43,46 @@ Page({
           comment_show:true
       })
   },
+  
 
+  tapDialogButton(e:any){
+    var index = e.detail.index
+    var _this = this
+    console.log('asdasd')
+    if(index == 0){
+        comment_add({
+            qid:_this.data.question_detail.qid as any,
+            comment_context:_this.data.comment_context as any
+        } ,
+        (res:any)=>{
+            if(res.data.code == 10000){
+                _this.setData({
+                    comment_show:false,
+                    comment_context:''
+                })
+                wx.showToast({
+                    title: '成功',
+                    icon: 'none',
+                    duration: 2000,
+                  })
+                var option = {qid:this.data.question_detail.qid}
+                this.onLoad(option)
+            }
+            console.log(res)
+        })
+    }
+    if(index == 1){
+      _this.setData({
+        comment_show:false
+    })
+    }
+  },
+  changeText(e:any){
+      var val = e.detail.value
+      this.setData({
+          comment_context:val
+      })
+  },
 
 
 
