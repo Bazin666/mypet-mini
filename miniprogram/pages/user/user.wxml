@@ -1,23 +1,27 @@
 <!-- index.wxml -->
 <view class="container">
   <view class="userinfo">
-    <view wx:if="{{!hasUserInfo && canIUse}}"></view>
+    <view wx:if="{{!hasUserInfo}}"></view>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="login">
-    <button bindtap="toLogin">登陆</button>
-  </view>
-  <view>
-    <button bindtap="toquestion">添加问题</button>
-  </view>
+  <block wx:if="{{!hasUserInfo}}">
+    <view class="login">
+      <button bindtap="toLogin">登陆</button>
+    </view>
     <view>
-    <button bindtap="toreg">注册</button>
-  </view>
+      <button bindtap="toreg">注册</button>
+    </view>
+  </block>
+  <block wx:if="{{hasUserInfo}}">
     <view>
-    <button bindtap="showQuestion">我的问题</button>
-  </view>
+      <button bindtap="toquestion">添加问题</button>
+    </view>
+    <view>
+      <button bindtap="showQuestion">我的问题</button>
+    </view>
+  </block>
   <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
 </view>

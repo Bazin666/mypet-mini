@@ -1,0 +1,63 @@
+/* miniprogram/pages/comment/commnet.wxss */
+/* components/editor/editor.wxss */
+
+.weui-cells_after-title {
+    margin-top: 0;
+  }
+  
+  view {
+    display: block;
+  }
+  
+  .weui-cells__title {
+    margin-top: 16px;
+    margin-bottom: 3px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    border-bottom-style: solid;
+    border-bottom-width: 2rpx;
+  }
+  
+  .weui-cells {
+    position: relative;
+    margin-top: 8px;
+    background-color: #fff;
+    line-height: 1.41176471;
+    font-size: 17px;
+  }
+  
+  .weui-textarea-counter {
+    color: rgba(0, 0, 0, 0.3);
+    text-align: right;
+  }
+  .weui-textarea {
+  
+      cursor: auto;
+      width: auto;
+      height: 500px;
+      display: flex;
+      overflow: hidden;
+      height: 15em
+  }
+  
+  
+  .context{
+      height: 500rpx;
+      flex-flow:column nowrap;
+      display: flex;
+  }
+
+  .btn{
+    margin:20rpx;float:left;width: 40%;
+  }
+
+  .clear{
+    overflow: auto;
+  }
+
+  .comment_msg .weui-dialog{
+    width:200%;
+    height: 200%;
+}

@@ -6,6 +6,10 @@ const question_add_url = pre_url+"question/add"
 const wx_login_url = pre_url+"wx_login"
 const question_change_url = pre_url+"question/change"
 const question_list_url = pre_url+"questions"
+const question_list_url_all = pre_url+"questions/all"
+const question_one = pre_url + "question"
+const question_rev = pre_url + "question/rev"
+const question_delete = pre_url + "question/delete"
 const header = {
     'content-type':'application/x-www-form-urlencoded',
     'Authorization':wx.getStorageSync('user_token') || 'test',
@@ -20,7 +24,11 @@ const config = {
     question_add_url,
     wx_login_url,
     question_change_url,
-    question_list_url
+    question_list_url,
+    question_list_url_all,
+    question_one,
+    question_rev,
+    question_delete,
 }
 
 export default config

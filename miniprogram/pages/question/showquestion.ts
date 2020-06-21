@@ -41,7 +41,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-  
+        this.onLoad()
     },
   
     /**
@@ -78,5 +78,11 @@ Page({
     onShareAppMessage: function () {
 
         return {}
-    }
+    },
+    select_q(e:any){
+        var qid = e.currentTarget.dataset.item.id
+        wx.navigateTo({
+            url:"../questiondetail/questiondetail?id="+qid
+        })
+    },
   })

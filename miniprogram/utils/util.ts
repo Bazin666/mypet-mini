@@ -21,3 +21,6 @@ const formatNumber = (n: number) => {
 export const getUserToken = () => {
   return wx.getStorageSync('user_token')
 }
+export const getUserID = () => {
+  return wx.getStorageSync('current_user')
+}

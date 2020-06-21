@@ -1,0 +1,34 @@
+<view class="page" hidden="{{hide}}">
+    <view class="page__bd">
+        <view class="weui-cells__title">标题</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <!-- <input class="weui-input" placeholder="请输入文本" value="{{question_detail.title}}" /> -->
+                    <text class="weui-input">{{question_detail.title}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title">详细信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+                <view class="weui-cell__bd context">
+                    <text class="">{{question_detail.context}}</text>
+                    <!-- <textarea class="weui-textarea" placeholder="请输入文本" style="" maxlength="200" bindinput="changeText" value="{{question_detail.context}}" /> -->
+                    <view class="weui-textarea-counter">{{textarea_num}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="clear">
+            <view class="btn-area" style="paddin">
+                <!-- <button style="margin:20rpx;float:left;width: 40%;" type="primary" bindtap="submit">修改</button>
+                <button style="margin:20rpx;float:right;width: 40%;" bindtap="delete">删除</button> -->
+                <button style="" bindtap="addcomment " type="primary">  评论  </button>
+            </view>
+        </view>
+    </view>
+
+     <mp-dialog class="comment_msg" title="test" show="{{comment_show}}" bindbuttontap="tapDialogButton" buttons="{{comment_button}}">
+        <view >test content</view>
+    </mp-dialog>
+</view>

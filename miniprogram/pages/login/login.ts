@@ -60,12 +60,10 @@ Page({
         })
 
     },
-    formReset(e:any){
-        console.log(e)
-        this.setData({
-            username:'',
-            password:''
-        })
+    formReset(){
+        wx.navigateTo({
+            url:'../reg/reg'
+          })
     },
     showMsg(){
         var _this = this
@@ -73,9 +71,13 @@ Page({
 
     },
     success_login(){
+        var _this = this
+        var pages = getCurrentPages();
+                var prePage = pages[pages.length - 2];
+                prePage.setData({userInfo:_this.data.userInfo,
+                                    hasUserInfo: true,})
         wx.navigateBack({
-            delta:1
-
+            delta:1,
         })
     },
     fail_login(){

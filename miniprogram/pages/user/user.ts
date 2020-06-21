@@ -16,9 +16,9 @@ Page({
   //   "selectedIconPath": "../../static/img/yonghu.png",
   //     badge: 'New'
   // }],
-    userInfo: {},
+    userInfo: undefined,
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    // canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
   // 事件处理函数
   bindViewTap() {
@@ -37,9 +37,11 @@ Page({
     _this.setData({
       userInfo:wx.getStorageSync('userInfo')
     })
-    _this.setData({
-      hasUserInfo:true
-    })
+    if(_this.data.userInfo){
+      _this.setData({
+        hasUserInfo:true
+      })
+    }
     if(getUserToken() ==null || getUserToken() == ''){
       wx.navigateTo({
         url:'../login/login'

@@ -1,4 +1,5 @@
 import config from './config'
+import { getUserID } from './util'
 const conf = config
 const res = wx.request
 
@@ -85,10 +86,65 @@ export const question_list = (success_function?:Function)=>{
         url:conf.question_list_url,
         method:"GET",
         header:conf.header,
+        data:{userid:getUserID()},
         success:(res) => {
             if(success_function){
                 success_function(res)
             }
-        }
+        },
+    })
+}
+export const question_list_all = (success_function?:Function)=>{
+    res({
+        url:conf.question_list_url_all,
+        method:"GET",
+        header:conf.header,
+        success:(res) => {
+            if(success_function){
+                success_function(res)
+            }
+        },
+    })
+}
+export const question_one = (data:{qid: number },success_function?:Function)=>{
+    res({
+        url:conf.question_one,
+        method:"GET",
+        header:conf.header,
+        data:data,
+        success:(res) => {
+            if(success_function){
+                success_function(res)
+            }
+        },
+    })
+}
+
+export const question_rev = (data:{qid: number,title:string,context:string },success_function?:Function)=>{
+    res({
+        url:conf.question_rev,
+        method:"POST",
+        header:conf.header,
+        data:data,
+        success:(res) => {
+            if(success_function){
+                success_function(res)
+            }
+        },
+    })
+}
+
+
+export const question_delete = (data:{qid: number,title:string,context:string },success_function?:Function)=>{
+    res({
+        url:conf.question_delete,
+        method:"POST",
+        header:conf.header,
+        data:data,
+        success:(res) => {
+            if(success_function){
+                success_function(res)
+            }
+        },
     })
 }

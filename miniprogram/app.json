@@ -2,9 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/community/community",
     "pages/user/user",
-    "pages/question/showquestion"
+    "pages/question/showquestion",
+    "pages/edit/edit",
+    "pages/questiondetail/questiondetail",
+    "pages/comment/comment"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,28 +1,9 @@
-<!-- 
-<view class="container">
-  <view class="userinfo">
-    <view wx:if="{{!hasUserInfo && canIUse}}"></view>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="login">
-    <button bindtap="tologin">登陆</button>
-  </view>
-  <view>
-    <button bindtap="toquestion">问题</button>
-  </view>
-    <view>
-    <button bindtap="toreg">注册</button>
-  </view>
-  <mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
-</view> -->
 
-<view class="container">
-  <!-- <view style="    display: flex;">
-      <image mode="aspectFit" mode="center" style="width:50%" src="../../static/img/pet/m_imgt1.jpg"/>
-      <image mode="aspectFit" mode="center" style="width:50%" src="../../static/img/pet/m_imgt2.jpg"/>
-  </view> -->
-  <view>这是首页</view>
+  <!-- <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
+    asdasd
+  </button> -->
+<view>
+    <mp-cells title="所有问题：">
+        <mp-cell link hover wx:for="{{question_l}}" wx:for-item="q" wx:for-index="i" wx:key="id" value="{{q.title}}" data-item="{{q}}" footer="问题{{i}}：" bindtap="select_q"></mp-cell>
+    </mp-cells>
 </view>

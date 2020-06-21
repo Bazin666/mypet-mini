@@ -1,0 +1,26 @@
+
+<view class="page" hidden="{{hide}}">
+    <view class="page__bd">
+        <view class="weui-cells__title">标题</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入文本" />
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title">详细信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+                <view class="weui-cell__bd context">
+                    <textarea class="weui-textarea" placeholder="请输入文本" style="" maxlength="200" bindinput="changeText"/>
+                    <view class="weui-textarea-counter">  {{textarea_num}}  </view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+        </view>
+
+    </view>
+</view>

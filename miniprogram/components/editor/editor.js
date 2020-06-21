@@ -1,0 +1,23 @@
+"use strict";
+Component({
+    properties: {
+        hide: {
+            type: Boolean,
+            value: false
+        }
+    },
+    data: {
+        textarea_num: "0/200",
+        context: ""
+    },
+    methods: {
+        changeText: function (e) {
+            var value = e.detail.value;
+            this.setData({
+                context: value,
+                textarea_num: value.length + "/" + "200"
+            });
+        }
+    }
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZWRpdG9yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiZWRpdG9yLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxTQUFTLENBQUM7SUFJTixVQUFVLEVBQUU7UUFDUixJQUFJLEVBQUM7WUFDRCxJQUFJLEVBQUMsT0FBTztZQUNaLEtBQUssRUFBQyxLQUFLO1NBQ2Q7S0FDSjtJQUtELElBQUksRUFBRTtRQUNGLFlBQVksRUFBQyxPQUFPO1FBQ3BCLE9BQU8sRUFBQyxFQUFFO0tBQ2I7SUFLRCxPQUFPLEVBQUU7UUFDTCxVQUFVLFlBQUMsQ0FBQztZQUNSLElBQUksS0FBSyxHQUFHLENBQUMsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFBO1lBQzFCLElBQUksQ0FBQyxPQUFPLENBQUM7Z0JBQ1QsT0FBTyxFQUFDLEtBQUs7Z0JBQ2IsWUFBWSxFQUFDLEtBQUssQ0FBQyxNQUFNLEdBQUMsR0FBRyxHQUFDLEtBQUs7YUFDdEMsQ0FBQyxDQUFBO1FBQ04sQ0FBQztLQUNKO0NBQ0YsQ0FBQyxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiLy8gY29tcG9uZW50cy9lZGl0b3IvZWRpdG9yLmpzXHJcbkNvbXBvbmVudCh7XHJcbiAgICAvKipcclxuICAgICAqIOe7hOS7tueahOWxnuaAp+WIl+ihqFxyXG4gICAgICovXHJcbiAgICBwcm9wZXJ0aWVzOiB7XHJcbiAgICAgICAgaGlkZTp7XHJcbiAgICAgICAgICAgIHR5cGU6Qm9vbGVhbixcclxuICAgICAgICAgICAgdmFsdWU6ZmFsc2VcclxuICAgICAgICB9XHJcbiAgICB9LFxyXG4gIFxyXG4gICAgLyoqXHJcbiAgICAgKiDnu4Tku7bnmoTliJ3lp4vmlbDmja5cclxuICAgICAqL1xyXG4gICAgZGF0YToge1xyXG4gICAgICAgIHRleHRhcmVhX251bTpcIjAvMjAwXCIsXHJcbiAgICAgICAgY29udGV4dDpcIlwiXHJcbiAgICB9LFxyXG4gIFxyXG4gICAgLyoqXHJcbiAgICAgKiDnu4Tku7bnmoTmlrnms5XliJfooahcclxuICAgICAqL1xyXG4gICAgbWV0aG9kczoge1xyXG4gICAgICAgIGNoYW5nZVRleHQoZSl7XHJcbiAgICAgICAgICAgIHZhciB2YWx1ZSA9IGUuZGV0YWlsLnZhbHVlXHJcbiAgICAgICAgICAgIHRoaXMuc2V0RGF0YSh7XHJcbiAgICAgICAgICAgICAgICBjb250ZXh0OnZhbHVlLFxyXG4gICAgICAgICAgICAgICAgdGV4dGFyZWFfbnVtOnZhbHVlLmxlbmd0aCtcIi9cIitcIjIwMFwiXHJcbiAgICAgICAgICAgIH0pXHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gIH0pXHJcbiAgIl19
